@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId("student_lesson_id")->constrained()->onDelete('cascade');
             $table->text('performance_notes');
-            $table->decimals('quiz_score', 5, 2)->nullable();
+            $table->decimal('quiz_score', 5, 2)->nullable();
             $table->timestamps();
         });
     }
